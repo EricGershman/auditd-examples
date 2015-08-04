@@ -61,7 +61,15 @@ Followed by the audit rules:
 -w /etc/sudoers -p wa
 ```
 
-The audit.rules file should end with the immutability settings.
+The audit.rules file should end with the immutability settings:
+
+```
+#Enable auditd
+-e 1 
+
+#Make the configuration immutable, a reboot is required to change the configuration settings or rulesets.
+-e 2 
+```
 
 Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be changed while the daemon is running using the auditctl command.  
 
@@ -90,7 +98,6 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
 -w /etc/shadow -p wa
 -w /etc/sudoers -p wa
 ```
-- [audit.rules Man Page] [audit.rules_man]
 
 ##Commands
 ###auditd
