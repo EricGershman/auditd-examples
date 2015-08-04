@@ -117,32 +117,37 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
    * ```aureport --login --failed``` - Failed Login Report
    * ```aureport --file``` - File Report
 
-##OSSEC
-https://github.com/ossec/ossec-hids/blob/6eb2d4dce24688c675de3202f21a925b0b7501f9/etc/decoder.xml#L2414
-
 #Links
-[auditd_man]: http://linux.die.net/man/8/auditd  "Auditd Man Page"
-[auditctl_man]: http://linux.die.net/man/8/auditctl  "Auditctl Man Page"
-[audit.rules_man]: http://linux.die.net/man/7/audit.rules  "audit.rules man page"
-http://security.blogoverflow.com/2013/01/a-brief-introduction-to-auditd/
-https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/chap-system_auditing.html
 
-## Reporting and Alerting Links
+## Man Pages
 
-Splunk: https://splunkbase.splunk.com/app/2642/
-Logstash: https://gist.github.com/artbikes/2313040 
-Logstash: http://serverfault.com/questions/609192/how-to-parse-audit-log-using-logstash 
-Bro: https://github.com/set-element/auditdBroFramework
-Ossec: https://github.com/ossec/ossec-docs/blob/master/decoders/10_auditd_decoder.xml 
+ * auditd: [http://linux.die.net/man/8/auditd](http://linux.die.net/man/8/auditd)
+ * auditctl: [http://linux.die.net/man/8/auditctl](http://linux.die.net/man/8/auditctl)
+ * audit.rules: [audit.rules_man](http://linux.die.net/man/7/audit.rules)
+
+## Intro to Auditd
+ * [http://security.blogoverflow.com/2013/01/a-brief-introduction-to-auditd/](http://security.blogoverflow.com/2013/01/a-brief-introduction-to-auditd/)
+ * [https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/chap-system_auditing.html](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/chap-system_auditing.html)
+
+## Reporting and Alerting
+
+ * Splunk: [https://splunkbase.splunk.com/app/2642/](https://splunkbase.splunk.com/app/2642/)
+ * Logstash Example: [https://gist.github.com/artbikes/2313040](https://gist.github.com/artbikes/2313040) 
+ * Logstash on serverfault: [http://serverfault.com/questions/609192/how-to-parse-audit-log-using-logstash](http://serverfault.com/questions/609192/how-to-parse-audit-log-using-logstash) 
+ * auditd Bro Framework: [https://github.com/set-element/auditdBroFramework](https://github.com/set-element/auditdBroFramework)
+ * Ossec Decoder: [https://github.com/ossec/ossec-docs/blob/master/decoders/10_auditd_decoder.xml](https://github.com/ossec/ossec-docs/blob/master/decoders/10_auditd_decoder.xml) 
 
 ## Presentations
-BroCon ‘15: https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine 
+ * Audit & IDS by Steve Grubb [http://people.redhat.com/sgrubb/audit/audit-ids.pdf](http://people.redhat.com/sgrubb/audit/audit-ids.pdf)
+
+### Upcoming 
+* "Looking for Ghosts in the Machine" By Scott Campbell for BroCon ‘15: [https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine](https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine) 
 
 ##PCI-DSS
-http://linux-audit.com/category/compliance/pci-dss/
-http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html
+[http://linux-audit.com/category/compliance/pci-dss/](http://linux-audit.com/category/compliance/pci-dss/)
+[http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html](http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html)
 
 ##CIS Benchmark
-https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf
-http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html
+[https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf](https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf)
+[http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html](http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html)
 
