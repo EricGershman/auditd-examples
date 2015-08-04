@@ -117,6 +117,20 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
    * ```aureport --login --failed``` - Failed Login Report
    * ```aureport --file``` - File Report
 
+### ausearch and aureport together
+Both ausearch and aureport are able to take in raw audit logs from STDIN, here is an example where we are looking at the executable report for a specific event: 
+
+```
+sysadmin@server:~$ sudo ausearch --event 662 --raw | aureport --executable --interpret
+
+Executable Report
+====================================
+# date time exe term host auid event
+====================================
+1. 07/27/2015 16:13:29 /usr/bin/whoami (none) ? unset 662
+```
+
+ 
 #Links
 
 ## Man Pages
