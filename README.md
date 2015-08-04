@@ -51,7 +51,7 @@ This contains all of the rules that are loaded when the system starts, most audi
 
 Followed by the audit rules:
 
-```
+```bash
 -a exit,always -S unlink -S rmdir
 -a exit,always -S stime.*
 -a exit,always -S setrlimit.*
@@ -63,7 +63,7 @@ Followed by the audit rules:
 
 The audit.rules file should end with the immutability settings:
 
-```
+```bash
 #Enable auditd
 -e 1 
 
@@ -78,12 +78,16 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
   * Control - “configuring the audit system”
   * File - “audit access to particular files or directories”
   * Syscall - “loaded into a matching engine that intercepts each syscall”
+
+###Options
 ```
 -a action list: always log on syscall exit
 -F field 
 -S syscall: execve
 -k Logging Key: programs
 ```
+
+###Sample Rules 
 ```bash
 -a always,exit -F arch=b32 -F uid=33 -S execve -k programs -k www
 -a always,exit -F arch=b64 -F uid=33 -S execve -k programs -k www
@@ -119,7 +123,6 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
    * ```auditctl -f 0``` - Do not report critical errors 
    * ```auditctl -f 1``` - Default, printk critical errors 
    * ```auditctl -f 2``` - Panic on critical errors 
-- [Auditctl Man Page] [auditctl_man]
 
 ####Manage Rules
    * ```auditctl -D``` - Clear all rules
