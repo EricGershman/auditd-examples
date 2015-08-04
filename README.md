@@ -46,7 +46,22 @@ This contains all of the rules that are loaded when the system starts, most audi
 
 ## Set failure mode to panic
 -f 2
+
 ```
+
+Followed by the audit rules:
+
+```
+-a exit,always -S unlink -S rmdir
+-a exit,always -S stime.*
+-a exit,always -S setrlimit.*
+-w /etc/group -p wa 
+-w /etc/passwd -p wa 
+-w /etc/shadow -p wa 
+-w /etc/sudoers -p wa
+```
+
+The audit.rules file should end with the immutability settings.
 
 Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be changed while the daemon is running using the auditctl command.  
 
