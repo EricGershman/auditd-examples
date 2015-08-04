@@ -175,6 +175,8 @@ Executable Report
  * Logstash on serverfault: [http://serverfault.com/questions/609192/how-to-parse-audit-log-using-logstash](http://serverfault.com/questions/609192/how-to-parse-audit-log-using-logstash) 
  * auditd Bro Framework: [https://github.com/set-element/auditdBroFramework](https://github.com/set-element/auditdBroFramework)
  * Ossec Decoder: [https://github.com/ossec/ossec-docs/blob/master/decoders/10_auditd_decoder.xml](https://github.com/ossec/ossec-docs/blob/master/decoders/10_auditd_decoder.xml) 
+ * Auditd Timeline Parser: [https://github.com/kosborn/auditd-timeline/](https://github.com/kosborn/auditd-timeline/)
+ * OS Query Auditd Work: [https://github.com/facebook/osquery/tree/master/osquery/tables/system/linux](https://github.com/facebook/osquery/tree/master/osquery/tables/system/linux)
 
 ## Presentations
  * Audit & IDS by Steve Grubb [http://people.redhat.com/sgrubb/audit/audit-ids.pdf](http://people.redhat.com/sgrubb/audit/audit-ids.pdf)
