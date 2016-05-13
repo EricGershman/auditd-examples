@@ -183,10 +183,10 @@ Executable Report
 * "Looking for Ghosts in the Machine" By Scott Campbell for BroCon ‘15: [https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine](https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine) 
 
 ##PCI-DSS
-[http://linux-audit.com/category/compliance/pci-dss-compliance/](http://linux-audit.com/category/compliance/pci-dss-compliance/)
-[http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html](http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html)
+ * [http://linux-audit.com/category/compliance/pci-dss-compliance/](http://linux-audit.com/category/compliance/pci-dss-compliance/)
+ * [http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html](http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html)
 
 ##CIS Benchmark
-[https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf](https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf)
-[http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html](http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html)
+ * [https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf](https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf)
+ * [http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html](http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html)
 
