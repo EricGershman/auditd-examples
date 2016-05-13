@@ -183,7 +183,7 @@ Executable Report
 * "Looking for Ghosts in the Machine" By Scott Campbell for BroCon ‘15: [https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine](https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine) 
 
 ##PCI-DSS
-[http://linux-audit.com/category/compliance/pci-dss/](http://linux-audit.com/category/compliance/pci-dss/)
+[http://linux-audit.com/category/compliance/pci-dss-compliance/](http://linux-audit.com/category/compliance/pci-dss-compliance/)
 [http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html](http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html)
 
 ##CIS Benchmark
