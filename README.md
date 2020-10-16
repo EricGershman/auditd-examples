@@ -3,7 +3,7 @@ The Linux Auditing system has been widely adopted as a way to meet auditing stan
 
 ## Configuring Auditd
 
-###/etc/audit/auditd.conf
+### /etc/audit/auditd.conf
 
 Settings in auditd.conf should be defined based on the importance of log integrity and how long you would like to keep records.
 
@@ -30,7 +30,7 @@ disk_full_action = SUSPEND
 disk_error_action = SUSPEND
 ```
 
-###/etc/audit/audit.rules
+### /etc/audit/audit.rules
 
 Example rule sets for most Linux distributions are stored in ```/usr/share/doc/auditd/examples```
 
@@ -73,13 +73,13 @@ The audit.rules file should end with the immutability settings:
 
 Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be changed while the daemon is running using the auditctl command.  
 
-##Rules
+## Rules
 “audit rules come in 3 varieties: control, file, and syscall”
   * Control - “configuring the audit system”
   * File - “audit access to particular files or directories”
   * Syscall - “loaded into a matching engine that intercepts each syscall”
 
-###Options
+### Options
 ```
 -a action list: always log on syscall exit
 -F field 
@@ -87,7 +87,7 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
 -k Logging Key: programs
 ```
 
-###Sample Rules 
+### Sample Rules 
 ```bash
 -a always,exit -F arch=b32 -F uid=33 -S execve -k programs -k www
 -a always,exit -F arch=b64 -F uid=33 -S execve -k programs -k www
@@ -103,20 +103,20 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
 -w /etc/sudoers -p wa
 ```
 
-##Commands
-###auditd
+## Commands
+### auditd
 ```auditd -f``` - foreground auditd, messages go to stderr
 ```SIGHUP``` - Reconfigure Auditd, re-read configuration files 
 
 "A boot param of audit=1 should be added to ensure that all processes that run before the audit daemon starts is marked as auditable by the kernel. "
-- [Auditd Man Page] [auditd_man]
+- [Auditd Man Page][auditd_man]
 
-###auditctl
+### auditctl
 "auditctl program is used to control the behavior, get status, and add or delete rules into the 2.6 kernel’s audit system."
 
 ```auditctl - l``` - List current rule set
 
-####Control Behavior 
+#### Control Behavior 
    * ```auditctl -e 0``` - Temporarily disable auditing 
    * ```auditctl -e 1``` - Re-enable auditing
    * ```auditctl -e 2``` - Lock auditing to enabled, reboot to change configuration. 
@@ -124,19 +124,19 @@ Rules can be stored in '''/etc/audit/audit.rules''' or the ruleset can be change
    * ```auditctl -f 1``` - Default, printk critical errors 
    * ```auditctl -f 2``` - Panic on critical errors 
 
-####Manage Rules
+#### Manage Rules
    * ```auditctl -D``` - Clear all rules
    * ```auditctl -l``` - List ruleset
    * ```auditctl -w /file -p rwxa -k file_alert``` - Watch all actions on a file and label with file_alert
    * ```auditctl -a always,exit -F arch=b32 -F uid=www-data -S execve -k programs -k www``` - Log all commands executed by the www-data user and label with programs and www keywords
 
-###ausearch
+### ausearch
 
    * ```ausearch -a 104``` - Search for event id 104
    * ```ausearch --uid 0 --syscall EXECVE --success yes``` - Search for all programs executed by root that were successful 
    * ```ausearch -ui 0 -sc EXECVE -sv yes``` - Search for all programs executed by root that were successful 
 
-###aureport
+### aureport
 
    * ```aureport --auth``` - Authentication Report
    * ```aureport --login --failed``` - Failed Login Report
@@ -156,11 +156,13 @@ Executable Report
 ```
 
  
-#Links
+# Links
 
 ## Man Pages
 
- * auditd: [http://linux.die.net/man/8/auditd](http://linux.die.net/man/8/auditd)
+  [auditd_man]: http://linux.die.net/man/8/auditd
+
+ * auditd: [http://linux.die.net/man/8/auditd][auditd_man]
  * auditctl: [http://linux.die.net/man/8/auditctl](http://linux.die.net/man/8/auditctl)
  * audit.rules: [audit.rules_man](http://linux.die.net/man/7/audit.rules)
 
@@ -182,11 +184,11 @@ Executable Report
 ### Upcoming 
 * "Looking for Ghosts in the Machine" By Scott Campbell for BroCon ‘15: [https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine](https://www.bro.org/brocon2015/brocon2015_abstracts.html#looking-for-ghosts-in-themachine) 
 
-##PCI-DSS
+## PCI-DSS
  * [http://linux-audit.com/category/compliance/pci-dss-compliance/](http://linux-audit.com/category/compliance/pci-dss-compliance/)
  * [http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html](http://networkrecipes.blogspot.com/2013/03/auditd-in-linux-for-pci-dss-compliance.html)
 
-##CIS Benchmark
+## CIS Benchmark
  * [https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf](https://benchmarks.cisecurity.org/tools2/linux/CIS_Red_Hat_Enterprise_Linux_6_Benchmark_v1.1.0.pdf)
  * [http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html](http://blog.ptsecurity.com/2010/11/requirement-10-track-and-monitor-all.html)
 
